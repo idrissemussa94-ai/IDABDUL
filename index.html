@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDABDUL AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script defer src="js/firebase.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/chat.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/app.js"></script>
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <h2>IDABDUL AI</h2>
+
+    </div>
+
+    <nav>
+
+        <button id="btnLogin">Entrar</button>
+
+        <button id="btnSignup">Criar Conta</button>
+
+        <button id="btnProfile" style="display:none;">
+            Perfil
+        </button>
+
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <h3>Conversas</h3>
+
+        <div id="history"></div>
+
+        <button id="newChat">
+            Nova Conversa
+        </button>
+
+    </aside>
+
+    <main class="chat">
+
+        <div id="messages">
+
+            <div class="welcome">
+
+                <h1>Olá!</h1>
+
+                <p>
+                    Sou a IDABDUL AI.
+                    Como posso ajudar hoje?
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="typing" id="typing" style="display:none;">
+            IDABDUL está escrevendo...
+        </div>
+
+        <div class="input-area">
+
+            <textarea
+                id="prompt"
+                placeholder="Pergunte qualquer coisa..."
+                rows="2"></textarea>
+
+            <button id="sendButton">
+                Enviar
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<div id="loginModal" class="modal"></div>
+
+<div id="signupModal" class="modal"></div>
+
+</body>
+</html>
